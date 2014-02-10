@@ -1,6 +1,6 @@
 <?php 
 
-class Core_Model_Article
+class Core_Model_Article implements Zend_Acl_Resource_Interface
 {
     private $articleId;
     private $articleTitle;
@@ -13,6 +13,11 @@ class Core_Model_Article
     public function getArticleId()
     {
         return $this->articleId;
+    }
+    
+    public function getResourceId()
+    {
+    	return 'article';
     }
 
 	/**
