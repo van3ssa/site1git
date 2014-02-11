@@ -14,12 +14,14 @@ class Core_Model_Article implements Zend_Acl_Resource_Interface
     {
         return $this->articleId;
     }
-    
-    public function getResourceId()
-    {
-    	return 'article';
-    }
 
+    /**
+     * @return string
+     */
+    public function getResourceId(){
+        return 'article';
+    }
+    
 	/**
      * @param field_type $articleId
      */

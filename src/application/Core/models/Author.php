@@ -1,25 +1,33 @@
 <?php 
 
-class Core_Model_Author implements Zend_Acl_Role_Interface, Zend_Acl_Resource_Interface
+class Core_Model_Author
 {
     private $authorId;
     private $authorName;
+    private $userId;
+    
+	/**
+     * @return the $userId
+     */
+    public function getUserId()
+    {
+        return $this->userId;
+    }
+
+	/**
+     * @param field_type $userId
+     */
+    public function setUserId($userId)
+    {
+        $this->userId = $userId;
+    }
+
 	/**
      * @return the $authorId
      */
     public function getAuthorId()
     {
         return $this->authorId;
-    }
-    
-    public function getRoleId()
-    {
-    	return 'author';
-    }
-
-    public function getResourceId()
-    {
-    	return 'author';
     }
     
 	/**
